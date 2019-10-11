@@ -35,13 +35,13 @@ public class RestApplication extends Application {
 
 @Override public Set<Class<?>> getClasses(){
 Set<Class<?>> resourceClasses=new HashSet<Class<?>>();
-  resourceClasses.add(BookRest.class);
-  resourceClasses.add(AudioRest.class);
-  resouceClasses.add(PersonRest.class);
-  resourceClasses.add(Notification.class);
-  return resouceClasses;
+          resourceClasses.add(BookRest.class);
+          resourceClasses.add(AudioRest.class);
+          resouceClasses.add(PersonRest.class);
+          resourceClasses.add(Notification.class);
+          return resouceClasses;
+   }
 }
-
 
 @Path("/notifications")
 public class NotificationsResource {
