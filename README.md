@@ -24,6 +24,10 @@ If you want to start playing with JAX-RS, the shortest path is: have a Maven web
 
 After the dependency is added we first have to write the entry class: an empty class which extends javax.ws.rs.core.Application and is annotated with javax.ws.rs.ApplicationPath:
 
+@Path("/notifications")
+public class NotificationsResource {
+   package org.config;
+
 import javax.ws.rs.ApplicationPath;
 import java.util.Set;
 import java.util.HashSet;
@@ -32,13 +36,14 @@ import java.util.HashSet;
 public class RestApplication extends Application {
 
 @Override public Set<Class<?>> getClasses(){
-    Set<Class<?>> resourceClasses=new HashSet<Class<?>>();
-          resourceClasses.add(BookRest.class);
-          resourceClasses.add(AudioRest.class);
-          resouceClasses.add(PersonRest.class);
-          resourceClasses.add(Notification.class);
-          return resouceClasses;
-   }
+Set<Class<?>> resourceClasses=new HashSet<Class<?>>();
+  resourceClasses.add(BookRest.class);
+  resourceClasses.add(AudioRest.class);
+  resouceClasses.add(PersonRest.class);
+  resourceClasses.add(Notification.class);
+  return resouceClasses;
+}
+
 }
 
 @Path("/notifications")
